@@ -44,6 +44,9 @@ public class DiabolicoTest {
         l1.agregarAlma(a4);
         l1.agregarAlma(a5);
         demon.cazarAlma(l1);
-        assertTrue(demon.almasCazadas.contains(l1.getConjuntoDeAlmas()));
+        assertFalse(l1.conjuntoDeAlmas.isEmpty());
+        demon.almasCazadas.forEach(alma -> System.out.println(alma));
+        l1.conjuntoDeAlmas.forEach(alma -> System.out.println(alma));
+        System.out.println(demon.almasJodidas.forEach(););
     }
 }
