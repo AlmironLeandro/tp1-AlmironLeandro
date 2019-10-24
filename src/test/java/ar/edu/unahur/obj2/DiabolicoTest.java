@@ -13,13 +13,16 @@ public class DiabolicoTest {
     @Test
     public void primerTest(){
         //ToDO TEST PARA SABER SI PUEDE CAZAR UNA DETERMINADA ALMA
-        Alma a1 = new Alma(false,10,10);
+        Alma a1 = new Alma();//false,10,10
+        a1.setEsFriolenta(false);
+        a1.setNivelBondad(10);
+        a1.setNivelValor(10);
         DemonioDeFuego d1 = new DemonioDeFuego(20);
         assertTrue(d1.puedeCazar(a1));
     }
     @Test
     public void segundoTest(){
-        Alma a1 = new Alma(true,22,22);
+        Alma a1 = new Alma();//true,22,22
         DemonioDeFuego d1 = new DemonioDeFuego(20);
         LugarDeAlma Neuquen = new LugarDeAlma();
         Neuquen.agregarAlma(a1);
@@ -31,11 +34,12 @@ public class DiabolicoTest {
     }
     @Test
     public void tercerTest(){
-        Alma a1 = new Alma(false,10,20);
-        Alma a2 = new Alma(true,22,22);
-        Alma a3 = new Alma(true,10,5);
-        Alma a4 = new Alma(false,15,16);
-        Alma a5 = new Alma(true,5,5);
+        Alma a1 = new Alma();//false,10,20
+        Alma a2 = new Alma();//true,22,22
+        Alma a3 = new Alma();//true,10,5
+        Alma a4 = new Alma();//false,15,16
+        Alma a5 = new Alma();//true,5,5
+
         DemonioDeHielo demon = new DemonioDeHielo(10);
         LugarDeAlma l1 = new LugarDeAlma();
         l1.agregarAlma(a1);
@@ -47,6 +51,13 @@ public class DiabolicoTest {
         assertFalse(l1.conjuntoDeAlmas.isEmpty());
         demon.almasCazadas.forEach(alma -> System.out.println(alma));
         l1.conjuntoDeAlmas.forEach(alma -> System.out.println(alma));
-        System.out.println(demon.almasJodidas.forEach(););
+        System.out.println(demon.almasJodidas);
+    }
+    @Test
+    public void test4(){
+        Alma a1 = new Alma();
+        Alma a2 = new Alma();
+        Alma a3 = new Alma();
+        CruzRoja c1 = new CruzRoja(a1);
     }
 }

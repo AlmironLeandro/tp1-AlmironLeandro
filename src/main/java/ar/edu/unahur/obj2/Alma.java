@@ -4,7 +4,6 @@ public class Alma {
     boolean esFriolenta;
     int nivelBondad;
     int nivelValor;
-
     public boolean getEsFriolenta() {
         return esFriolenta;
     }
@@ -29,9 +28,10 @@ public class Alma {
         this.nivelValor = nivelValor;
     }
 
-    public Alma(boolean esFriolenta, int nivelBondad, int nivelValor) {
+    /*public Alma(boolean esFriolenta, int nivelBondad, int nivelValor) {
         this.esFriolenta = esFriolenta;
         this.nivelBondad = nivelBondad;
         this.nivelValor = nivelValor;
     }
+     */
 }
