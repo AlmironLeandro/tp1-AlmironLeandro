@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 public abstract class Demonio {
+    Alma a1;
+    int max= 0;
     int nivelDeMaldad;
     ArrayList<Alma> almasJodidas = new ArrayList<Alma>();
     ArrayList<Alma> almasCazadas = new ArrayList<Alma>();
@@ -13,6 +15,17 @@ public abstract class Demonio {
     }
     public ArrayList<Alma> getAlmasCazadas() {
         return almasCazadas;
+    }
+    public Alma almasMasValiente(){
+        for (Alma a:almasCazadas
+        ) {
+            if(a.getNivelValor() > max){
+                max=a.getNivelValor();
+                a1= a;
+            }
+        }
+        return a1;
+
     }
     public Demonio(int nivelDeMaldad) {
         this.nivelDeMaldad = nivelDeMaldad;
@@ -26,6 +39,7 @@ public abstract class Demonio {
     public ArrayList<Alma> getAlmasJodidas() {
         return almasJodidas;
     }
+    public int numeroDeAlmas(){return almasCazadas.size();}
 //ToDo verificar
     //PRIMERA FORMA LAMBDA---> sale a cazar
     public void cazarAlma(LugarDeAlma l1){ salirACazar(l1).forEach((alma) ->
